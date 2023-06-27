@@ -159,10 +159,72 @@ margin-bottom: 40px;
 font-size: 32px;
 font-weight: 700;
 }
+
+.prising-switch{
+  margin-bottom: 64px;
+}
+
+.switch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch-control{
+  position: relative;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 4px;
+  width: 56px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  cursor: pointer;
+
+}
+
+.switch-input-annual:checked ~ .switch-control .switch-control-monthly,
+.switch-input-monthly:checked ~ .switch-control .switch-control-annual{
+  z-index: 5;
+}
+.switch-input-monthly:checked ~ .switch-control .switch-circle{
+  margin-left: 24px;
+}
+
+.switch-circle{
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: auto;
+  transition: margin 0.2s ease;
+}
+.switch-control-annual,.switch-control-monthly{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+.switch-label{
+  color: rgb(110, 114, 142, 0.25);
+text-align: right;
+font-size: 15px;
+font-weight: 700;
+line-height: 28px;
+cursor: pointer;
+}
+
+.switch-label:hover{
+color:#6E728E;
+}
 .prising {
   width: 100%;
-}
-.visually-hidden {
 }
 .prising-inner {
   display: flex;
@@ -235,4 +297,8 @@ border-color: rgba(255, 255, 255, 0.25);
 }
 .prising-plan-best .prising-plan-features{
   border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .prising-plan-best .prising-plan-feature{
+    border-color: rgba(255, 255, 255, 0.25);
   }
